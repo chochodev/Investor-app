@@ -46,7 +46,7 @@ export default function Layout({
       </header>
 
 
-        <main className="container mx-auto mt-8 px-4">
+        <main className="container">
           {children}
         </main>
         
