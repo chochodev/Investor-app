@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Invest smartly with our cutting-edge platform',
 }
 
-export function Layout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode
