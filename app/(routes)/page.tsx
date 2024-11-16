@@ -1,10 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { LuArrowRight, LuArrowUpRight, LuBarChart2, LuShield, LuWallet } from "react-icons/lu"
+import { LuArrowRight, LuArrowUpRight, LuShield, LuWallet } from "react-icons/lu";
 
 export default function Component() {
   const [prices, setPrices] = useState([
@@ -43,30 +42,6 @@ export default function Component() {
           ))}
         </div>
       </div>
-
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b">
-        <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <LuBarChart2 className="h-6 w-6 text-blue-600" />
-            <span className="font-bold text-xl">InvestSmart</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#" className="text-sm hover:text-blue-600">Home</Link>
-            <Link href="#" className="text-sm hover:text-blue-600">About Us</Link>
-            <Link href="#" className="text-sm hover:text-blue-600">FAQs</Link>
-            <Link href="#" className="text-sm hover:text-blue-600">Our Policy</Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <Link href="/signin">Login</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/signup">Register</Link>
-            </Button>
-          </div>
-        </nav>
-      </header>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
@@ -127,17 +102,6 @@ export default function Component() {
           </Card>
         </div>
       </section>
-
-      <style jsx global>{`
-        @keyframes ticker {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-ticker-slide {
-          animation: ticker 20s linear infinite;
-          min-width: max-content;
-        }
-      `}</style>
     </div>
   )
 }
